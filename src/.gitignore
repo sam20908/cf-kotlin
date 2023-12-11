@@ -1,0 +1,8 @@
+# Ignore everything (exceptions below)
+/*
+
+# Keep the DSA package
+!dsa/
+
+# Keep the template
+!Template.kt
