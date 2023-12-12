@@ -1,13 +1,17 @@
 package dsa
 
-private infix fun Int.gcd(other: Int): Int {
-    var a = this
-    var b = other
+private fun gcd(a: Int, b: Int): Int {
+    @Suppress("NAME_SHADOWING") var a = a
+    @Suppress("NAME_SHADOWING") var b = b
     while (b > 0) {
         a %= b;
         a = b.also { b = a }
     }
     return a;
+}
+
+private fun lcm(a: Int, b: Int): Int {
+    return a * b / gcd(a, b)
 }
 
 private fun powMod(a: Long, b: Long, m: Long): Long {
