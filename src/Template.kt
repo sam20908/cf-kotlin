@@ -18,7 +18,6 @@ private fun eprintln(m: Any) = System.err.println(m)
 private fun solve() = writer.apply {}
 
 fun main() {
-    val t = read().toInt()
-    for (i in 0 until t) solve()
+    repeat(read().toInt()) { solve() }
     writer.flush()
 }
