@@ -12,7 +12,8 @@ private fun read(): String {
     return tokenizer.nextToken()
 }
 
-@Suppress("UNUSED")
+private fun readInt(): Int = read().toInt()
+private fun readLong(): Long = read().toLong()
 private fun eprintln(m: Any) = System.err.println(m)
 
 private fun solve() = writer.apply {}
