@@ -1,6 +1,6 @@
 package dsa
 
-class TrieChar {
+private class TrieChar {
     class Node {
         val next = Array<Node?>(26) { null }
         var end = false
