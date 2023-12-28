@@ -20,10 +20,7 @@ private class AhoCorasick(words: Array<String>) {
             matches[cur].add(i)
         }
         val q = ArrayDeque<Int>()
-        for (i in 0..<26) {
-            if (next[0][i] != -1) q.add(next[0][i])
-            else next[0][i] = 0
-        }
+        for (i in 0..<26) if (next[0][i] != -1) q.add(next[0][i]) else next[0][i] = 0
         while (q.isNotEmpty()) {
             val u = q.removeFirst()
             for (v in 0..<26) if (next[u][v] != -1) {
